@@ -6,20 +6,19 @@ public class SecondLargeElement {
         int largest = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] > array[largest]) {
-                largest = i;
                 result = largest;
+                largest = i;
             } else if (array[i] != array[largest]) {
                 if (result == -1 || array[result] < array[i]) {
                     result = i;
                 }
             }
         }
-
         return result;
     }
 
     public static void main(String[] args) {
-        int[] array = { 1, 2, 3, 4, 5, 6 };
-        System.out.println("Second Large Element is :- " + secondLargeElement(array));
+        int[] array = { 100, 10, 20, 30, 40, 50, 60, 70, 80, 90, 110 };
+        System.out.println("Second Large Element is :- " + array[secondLargeElement(array)]);
     }
 }
